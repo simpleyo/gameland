@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\gameserver\config\config.h" />
+    <ClInclude Include="..\..\src\gameserver\core\buffer_allocator.h" />
+    <ClInclude Include="..\..\src\gameserver\core\channels\channel.h" />
+    <ClInclude Include="..\..\src\gameserver\core\circulararray.h" />
+    <ClInclude Include="..\..\src\gameserver\core\circularbuffer.h" />
+    <ClInclude Include="..\..\src\gameserver\core\circularbufferbase.h" />
+    <ClInclude Include="..\..\src\gameserver\core\defs.h" />
+    <ClInclude Include="..\..\src\gameserver\core\doublebuffer.h" />
+    <ClInclude Include="..\..\src\gameserver\core\endian.h" />
+    <ClInclude Include="..\..\src\gameserver\core\error_macros.h" />
+    <ClInclude Include="..\..\src\gameserver\core\fastboolmap.h" />
+    <ClInclude Include="..\..\src\gameserver\core\fastlz\fastlz.h" />
+    <ClInclude Include="..\..\src\gameserver\core\grid_locator.h" />
+    <ClInclude Include="..\..\src\gameserver\core\idr.h" />
+    <ClInclude Include="..\..\src\gameserver\core\intpoint.h" />
+    <ClInclude Include="..\..\src\gameserver\core\intrect.h" />
+    <ClInclude Include="..\..\src\gameserver\core\json\include\json.hpp" />
+    <ClInclude Include="..\..\src\gameserver\core\json_types.h" />
+    <ClInclude Include="..\..\src\gameserver\core\logger.h" />
+    <ClInclude Include="..\..\src\gameserver\core\math\math_2d.h" />
+    <ClInclude Include="..\..\src\gameserver\core\math\math_defs.h" />
+    <ClInclude Include="..\..\src\gameserver\core\math\math_funcs.h" />
+    <ClInclude Include="..\..\src\gameserver\core\math\typedefs.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\aes.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\aesni.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\arc4.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\aria.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\asn1.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\asn1write.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\base64.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\bignum.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\blowfish.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\bn_mul.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\camellia.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ccm.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\certs.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\chacha20.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\chachapoly.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\check_config.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\cipher.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\cipher_internal.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\cmac.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\compat-1.3.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\config.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ctr_drbg.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\debug.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\des.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\dhm.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ecdh.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ecdsa.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ecjpake.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ecp.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ecp_internal.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\entropy.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\entropy_poll.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\error.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\gcm.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\havege.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\hkdf.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\hmac_drbg.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\md.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\md2.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\md4.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\md5.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\md_internal.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\memory_buffer_alloc.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\net.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\net_sockets.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\nist_kw.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\oid.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\padlock.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\pem.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\pk.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\pkcs11.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\pkcs12.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\pkcs5.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\pk_internal.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\platform.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\platform_time.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\platform_util.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\poly1305.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ripemd160.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\rsa.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\rsa_internal.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\sha1.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\sha256.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\sha512.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ssl.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ssl_cache.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ssl_ciphersuites.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ssl_cookie.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ssl_internal.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\ssl_ticket.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\threading.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\timing.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\version.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\x509.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\x509_crl.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\x509_crt.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\x509_csr.h" />
+    <ClInclude Include="..\..\src\gameserver\core\mbedtls\include\mbedtls\xtea.h" />
+    <ClInclude Include="..\..\src\gameserver\core\pool\noniterable_objectpool.h" />
+    <ClInclude Include="..\..\src\gameserver\core\pool\objectpool.h" />
+    <ClInclude Include="..\..\src\gameserver\core\pool\stackpool.h" />
+    <ClInclude Include="..\..\src\gameserver\core\pool\staticpool.h" />
+    <ClInclude Include="..\..\src\gameserver\core\signals.h" />
+    <ClInclude Include="..\..\src\gameserver\core\stlplus\file_system.hpp" />
+    <ClInclude Include="..\..\src\gameserver\core\stlplus\portability_fixes.hpp" />
+    <ClInclude Include="..\..\src\gameserver\core\stlplus\wildcard.hpp" />
+    <ClInclude Include="..\..\src\gameserver\core\timers.h" />
+    <ClInclude Include="..\..\src\gameserver\core\trace.h" />
+    <ClInclude Include="..\..\src\gameserver\core\types.h" />
+    <ClInclude Include="..\..\src\gameserver\core\utils.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\App.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\AsyncSocket.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\AsyncSocketData.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\BloomFilter.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\HttpContext.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\HttpContextData.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\HttpParser.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\HttpResponse.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\HttpResponseData.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\HttpRouter.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\Loop.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\LoopData.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\MessageParser.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\MoveOnlyFunction.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\Multipart.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\PerMessageDeflate.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\ProxyParser.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\QueryParser.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\TopicTree.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\Utilities.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\WebSocket.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\WebSocketContext.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\WebSocketContextData.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\WebSocketData.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\WebSocketExtensions.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\WebSocketHandshake.h" />
+    <ClInclude Include="..\..\src\gameserver\core\uwebsockets\WebSocketProtocol.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\iavatar.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\ichap.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\ientity.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\igmap.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\ihut.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\iinput_state.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\ipaint.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\iplayer.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\irace.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\isession.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\itank.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\itracker.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\iview.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\actionable.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\avatar.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\b2_context.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\cell\block.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\cell\cell.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\cell\cell_data_iterator.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\cell\common.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\cell\iterator.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\cell\location.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\cell\map.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\cell_locatable.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\cell_locatable_entity_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\chap.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\chap_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\circuit.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\collision_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\context.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\controllable.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\defs.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\engine.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\entity.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\entity_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\gmap.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\gmap_component.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\gmap_config.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\gmap_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\hut.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\hut_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\modeable.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\needstepable.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\paints.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\pass_constructible.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\player.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\player_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\prize_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\race.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\radar.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\ranking.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\renderable.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\spawn_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\stateable.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\static_body_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\tank.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\tank_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\tiles.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\time.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\tracker.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\tracker_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\view.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\view_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\view_renderer.h" />
+    <ClInclude Include="..\..\src\gameserver\engine\simple\world_blocks.h" />
+    <ClInclude Include="..\..\src\gameserver\engine_context.h" />
+    <ClInclude Include="..\..\src\gameserver\game\tanks\tanks_game_context.h" />
+    <ClInclude Include="..\..\src\gameserver\game\tanks\tank_config.h" />
+    <ClInclude Include="..\..\src\gameserver\game\tanks\tank_environment.h" />
+    <ClInclude Include="..\..\src\gameserver\game\tanks\tank_model.h" />
+    <ClInclude Include="..\..\src\gameserver\handshake.h" />
+    <ClInclude Include="..\..\src\gameserver\main\cmain.h" />
+    <ClInclude Include="..\..\src\gameserver\main\main_loop.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\event\events.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\event\event_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\event\request.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\game_context\game_context.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\game_context\game_session.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\game_context\play_session.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\game_context\room.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\launcher\launcher_client.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\main_server_client\controller.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\main_server_client\debug_controller.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\main_server_client\icontroller.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\main_server_client\request_coder.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\main_server_client\resource_download_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\main_server_client\resource_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\origin_client\origin_client.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\user\account_session.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\user\user.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\user\user_manager.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\user\packet_parser.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\user\resource_uploader.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\ws\defs.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\ws\server.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\ws\slot.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\ws\ws_server.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\ws\ws_server_listen_params.h" />
+    <ClInclude Include="..\..\src\gameserver\modules\ws\ws_server_v2.h" />
+    <ClInclude Include="..\..\src\gameserver\packet_builder.h" />
+    <ClInclude Include="..\..\src\gameserver\protocol.h" />
+    <ClInclude Include="..\..\src\gameserver\test\workers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\gameserver\config\config.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\channels\channel.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\endian.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\error_macros.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\fastlz\fastlz.c" />
+    <ClCompile Include="..\..\src\gameserver\core\json_types.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\logger.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\math\math_2d.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\math\math_funcs.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\aes.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\aesni.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\arc4.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\aria.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\asn1parse.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\asn1write.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\base64.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\bignum.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\blowfish.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\camellia.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ccm.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\certs.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\chacha20.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\chachapoly.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\cipher.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\cipher_wrap.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\cmac.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ctr_drbg.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\debug.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\des.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\dhm.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ecdh.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ecdsa.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ecjpake.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ecp.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ecp_curves.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\entropy.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\entropy_poll.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\error.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\gcm.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\havege.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\hkdf.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\hmac_drbg.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\md.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\md2.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\md4.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\md5.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\md_wrap.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\memory_buffer_alloc.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\net_sockets.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\nist_kw.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\oid.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\padlock.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\pem.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\pk.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\pkcs11.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\pkcs12.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\pkcs5.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\pkparse.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\pkwrite.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\pk_wrap.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\platform.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\platform_util.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\poly1305.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ripemd160.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\rsa.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\rsa_internal.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\sha1.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\sha256.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\sha512.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ssl_cache.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ssl_ciphersuites.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ssl_cli.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ssl_cookie.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ssl_srv.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ssl_ticket.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\ssl_tls.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\threading.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\timing.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\version.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\version_features.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\x509.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\x509write_crt.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\x509write_csr.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\x509_create.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\x509_crl.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\x509_crt.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\x509_csr.c" />
+    <ClCompile Include="..\..\src\gameserver\core\mbedtls\src\xtea.c" />
+    <ClCompile Include="..\..\src\gameserver\core\signals.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\stlplus\file_system.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\stlplus\portability_fixes.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\stlplus\wildcard.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\timers.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\trace.cpp" />
+    <ClCompile Include="..\..\src\gameserver\core\utils.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\b2_context.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\cell_locatable_entity_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\chap.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\chap_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\circuit.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\collision_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\context.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\engine.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\entity_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\gmap.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\gmap_config.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\gmap_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\hut.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\hut_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\paints.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\player.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\player_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\race.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\radar.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\ranking.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\spawn_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\tank.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\tank_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\tiles.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\time.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\tracker.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\tracker_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\view.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\view_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\view_renderer.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine\simple\world_blocks.cpp" />
+    <ClCompile Include="..\..\src\gameserver\engine_context.cpp" />
+    <ClCompile Include="..\..\src\gameserver\game\tanks\tanks_game_context.cpp" />
+    <ClCompile Include="..\..\src\gameserver\main.cpp" />
+    <ClCompile Include="..\..\src\gameserver\main\cmain.cpp" />
+    <ClCompile Include="..\..\src\gameserver\main\main_loop.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\event\event_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\game_context\game_context.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\game_context\game_session.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\game_context\play_session.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\game_context\room.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\launcher\launcher_client.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\main_server_client\controller.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\main_server_client\debug_controller.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\main_server_client\icontroller.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\main_server_client\request_coder.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\main_server_client\resource_download_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\main_server_client\resource_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\origin_client\origin_client.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\user\user.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\user\user_manager.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\user\packet_parser.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\user\resource_uploader.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\ws\slot.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\ws\ws_server.cpp" />
+    <ClCompile Include="..\..\src\gameserver\modules\ws\ws_server_v2.cpp" />
+    <ClCompile Include="..\..\src\gameserver\packet_builder.cpp" />
+    <ClCompile Include="..\..\src\gameserver\protocol.cpp" />
+    <ClCompile Include="..\..\src\gameserver\test\workers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\gameserver\core\channels\cpp-channel-master\include\channel" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8a680fe8-5854-43a4-be1c-2179b9da6111}</ProjectGuid>
+    <RootNamespace>gameserver</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GAME_SERVER;JSON_NOEXCEPTION;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>E:\DEV\Tools\vcpkg\installed\x64-windows\include;$(SolutionDir)\..\src\gameserver\core\mbedtls\include;$(SolutionDir)\..\src\thirdparty;$(SolutionDir)\..\src\thirdparty\usockets;$(SolutionDir)\..\src\gameserver;$(SolutionDir)\..\src</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\DEV\Tools\vcpkg\installed\x64-windows\debug\lib;$(OutDir)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Box2D.lib;Bcrypt.lib;uWS.lib;uSockets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GAME_SERVER;JSON_NOEXCEPTION;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>E:\DEV\Tools\vcpkg\installed\x64-windows\include;$(SolutionDir)\..\src\gameserver\core\mbedtls\include;$(SolutionDir)\..\src\thirdparty;G:\DEV\Projects\gameland\game-server\src\thirdparty\usockets;$(SolutionDir)\..\src\gameserver;$(SolutionDir)\..\src</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\DEV\Tools\vcpkg\installed\x64-windows\lib;$(OutDir)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Box2D.lib;Bcrypt.lib;uWS.lib;uSockets.lib;libuv.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

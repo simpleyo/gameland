@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gameserver", "gameserver\gameserver.vcxproj", "{8A680FE8-5854-43A4-BE1C-2179B9DA6111}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1972F711-83E7-4B2E-ACAD-AFE33E9E0A0A} = {1972F711-83E7-4B2E-ACAD-AFE33E9E0A0A}
+		{1972F711-83E7-4B2E-ACAD-AFE33E9E0A0B} = {1972F711-83E7-4B2E-ACAD-AFE33E9E0A0B}
+		{DEF11C2D-57C5-456C-A1F4-43994AF75396} = {DEF11C2D-57C5-456C-A1F4-43994AF75396}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "uWS", "uWS\uWS.vcxproj", "{1972F711-83E7-4B2E-ACAD-AFE33E9E0A0A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "uSockets", "uSockets\uSockets.vcxproj", "{1972F711-83E7-4B2E-ACAD-AFE33E9E0A0B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Box2D", "Box2D\Box2D.vcxproj", "{DEF11C2D-57C5-456C-A1F4-43994AF75396}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "monitor", "monitor\monitor.vcxproj", "{81680FE8-5854-43A4-BE1C-2179B9DA6111}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1972F711-83E7-4B2E-ACAD-AFE33E9E0A0A} = {1972F711-83E7-4B2E-ACAD-AFE33E9E0A0A}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A680FE8-5854-43A4-BE1C-2179B9DA6111}.Debug|x64.ActiveCfg = Debug|x64
+		{8A680FE8-5854-43A4-BE1C-2179B9DA6111}.Debug|x64.Build.0 = Debug|x64
+		{8A680FE8-5854-43A4-BE1C-2179B9DA6111}.Release|x64.ActiveCfg = Release|x64
+		{8A680FE8-5854-43A4-BE1C-2179B9DA6111}.Release|x64.Build.0 = Release|x64
+		{1972F711-83E7-4B2E-ACAD-AFE33E9E0A0A}.Debug|x64.ActiveCfg = Debug|x64
+		{1972F711-83E7-4B2E-ACAD-AFE33E9E0A0A}.Debug|x64.Build.0 = Debug|x64
+		{1972F711-83E7-4B2E-ACAD-AFE33E9E0A0A}.Release|x64.ActiveCfg = Release|x64
+		{1972F711-83E7-4B2E-ACAD-AFE33E9E0A0A}.Release|x64.Build.0 = Release|x64
+		{1972F711-83E7-4B2E-ACAD-AFE33E9E0A0B}.Debug|x64.ActiveCfg = Debug|x64
+		{1972F711-83E7-4B2E-ACAD-AFE33E9E0A0B}.Debug|x64.Build.0 = Debug|x64
+		{1972F711-83E7-4B2E-ACAD-AFE33E9E0A0B}.Release|x64.ActiveCfg = Release|x64
+		{1972F711-83E7-4B2E-ACAD-AFE33E9E0A0B}.Release|x64.Build.0 = Release|x64
+		{DEF11C2D-57C5-456C-A1F4-43994AF75396}.Debug|x64.ActiveCfg = Debug|x64
+		{DEF11C2D-57C5-456C-A1F4-43994AF75396}.Debug|x64.Build.0 = Debug|x64
+		{DEF11C2D-57C5-456C-A1F4-43994AF75396}.Release|x64.ActiveCfg = Release|x64
+		{DEF11C2D-57C5-456C-A1F4-43994AF75396}.Release|x64.Build.0 = Release|x64
+		{81680FE8-5854-43A4-BE1C-2179B9DA6111}.Debug|x64.ActiveCfg = Debug|x64
+		{81680FE8-5854-43A4-BE1C-2179B9DA6111}.Debug|x64.Build.0 = Debug|x64
+		{81680FE8-5854-43A4-BE1C-2179B9DA6111}.Release|x64.ActiveCfg = Release|x64
+		{81680FE8-5854-43A4-BE1C-2179B9DA6111}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74FE91BB-D06A-4BA7-BD65-0AC06147AE59}
+	EndGlobalSection
+EndGlobal
