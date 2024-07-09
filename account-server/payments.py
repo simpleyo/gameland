@@ -3,8 +3,8 @@ from pydantic import BaseModel
 
 # Add your credentials:
 # Add your client ID and secret
-PP_CLIENT = 'AdVspefqogkKm9MkuLcCcpFTVOGsJBNEijzgHltP-HoBydRgNmNjfNoL5ysSyd51bgfNrb6ViqcE5GTm'
-PP_SECRET = 'ELXHWz-a5RbXnIHs1z8YytwjPMJM8JcvYNFV2cNoIBMQl0s2lFjwzSq32hPqRp_38LbMKVUuuL3wTpaT'
+PP_CLIENT = 'Adgb6ViqcE5GTm'
+PP_SECRET = 'ELXHWz-a5RbXnIHs1gTpaT'
 PAYPAL_API = 'https://api-m.sandbox.paypal.com'
 
 class Order(BaseModel):
