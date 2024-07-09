@@ -1,0 +1,4 @@
+Copiar directorio account-server-golang.
+Compilar mediante: go build
+
+Copiar directorio resource-server.

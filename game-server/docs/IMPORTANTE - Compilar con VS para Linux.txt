@@ -1,0 +1,2 @@
+No hay que usar la Solucion rigel sino que hay que abrir con VS la carpeta donde esta 
+el archivo principal CMakeList.txt el cual esta en game-server/src

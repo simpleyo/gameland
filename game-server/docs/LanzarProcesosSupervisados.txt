@@ -1,0 +1,25 @@
+http://cr.yp.to/daemontools.html
+
+What is it?
+daemontools is a collection of tools for managing UNIX services.
+
+supervise monitors a service. It starts the service and restarts the service if it dies. Setting up a new service is easy: all supervise needs is a directory with a run script that runs the service.
+
+multilog saves error messages to one or more logs. It optionally timestamps each line and, for each log, includes or excludes lines matching specified patterns. It automatically rotates logs to limit the amount of disk space used. If the disk fills up, it pauses and tries again, without losing any data. 
+
+
+Los servicios se colocan cada uno en un directorio. El nombre del servicio es el nombre del directorio.
+En el directorio del servicio debe haber un fichero run, el cual es el que ejecutara supervise.
+Dentro del fichero run, el programa se debe llamar mediante 'exec nombre-programa', de esta forma el proceso
+ejecutado tendra el mismo pid que run. 
+
+exec nohup command </dev/null >/dev/null 2>&1 & # completely detached from terminal 
+
+Cuando se ejecuta svscan, este recorre el directorio actual en busca de directorios de servicios,
+es decir, que contengan un fichero run y cuyo nombre no empiece por '.'
+
+Para ver la jerarquia de procesos en el terminal actual: ps Tf
+
+Para comprobar el estado de un servicio: svstat service.
+
+svc permite controlar los servicios.

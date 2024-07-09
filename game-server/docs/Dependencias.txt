@@ -1,0 +1,23 @@
+Dependencias:
+    - uWS        
+        - libuv.lib (Para linux, uWS no utiliza libuv sino epoll)
+            - userenv.lib
+                - __imp_GetUserProfileDirectoryW sin resolver al que se hace referencia en la función uv__getpwuid_r	gameserver	G:\DEV\Projects\gameland\game-server\build\gameserver\uWS.lib(util.c.obj)	1	
+            - Psapi.lib
+                - uWS.lib(util.c.obj) : error LNK2019: símbolo externo GetProcessMemoryInfo sin resolver al que se hace referencia en la función uv_resident_set_memory
+            - Iphlpapi.lib
+                - uWS.lib(util.c.obj) : error LNK2019: símbolo externo GetAdaptersAddresses sin resolver al que se hace referencia en la función uv_interface_addresses        
+
+        - libeay32.lib // openssl (disponible en linux)
+        - ssleay32.lib // openssl (disponible en linux)
+        - zlibd.lib // zlib (disponible en linux)
+
+
+    - gameserver:
+        - uWS        
+        - Box2D.lib
+        - Bcrypt.lib
+            - mbedtls
+                - entropy_poll.obj : error LNK2019: símbolo externo BCryptGenRandom sin resolver al que se hace referencia en la función mbedtls_platform_entropy_poll
+            
+

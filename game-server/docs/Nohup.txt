@@ -1,0 +1,33 @@
+https://stackoverflow.com/questions/10408816/how-do-i-use-the-nohup-command-without-getting-nohup-out
+
+The nohup command only writes to nohup.out if the output would otherwise go to the terminal. If you have redirected the output of the command somewhere else - including /dev/null - that's where it goes instead.
+
+ nohup command >/dev/null 2>&1   # doesn't create nohup.out
+
+If you're using nohup, that probably means you want to run the command in the background by putting another & on the end of the whole thing:
+
+ nohup command >/dev/null 2>&1 & # runs in background, still doesn't create nohup.out
+
+On Linux, running a job with nohup automatically closes its input as well. On other systems, notably BSD and macOS, that is not the case, so when running in the background, you might want to close input manually. While closing input has no effect on the creation or not of nohup.out, it avoids another problem: if a background process tries to read anything from standard input, it will pause, waiting for you to bring it back to the foreground and type something. So the extra-safe version looks like this:
+
+nohup command </dev/null >/dev/null 2>&1 & # completely detached from terminal 
+
+Note, however, that this does not prevent the command from accessing the terminal directly, nor does it remove it from your shell's process group. If you want to do the latter, and you are running bash, ksh, or zsh, you can do so by running disown with no argument as the next command. That will mean the background process is no longer associated with a shell "job" and will not have any signals forwarded to it from the shell. (Note the distinction: a disowned process gets no signals forwarded to it automatically by its parent shell - but without nohup, it will still receive a HUP signal sent via other means, such as a manual kill command. A nohup'ed process ignores any and all HUP signals, no matter how they are sent.)
+
+Explanation:
+
+In Unixy systems, every source of input or target of output has a number associated with it called a "file descriptor", or "fd" for short. Every running program ("process") has its own set of these, and when a new process starts up it has three of them already open: "standard input", which is fd 0, is open for the process to read from, while "standard output" (fd 1) and "standard error" (fd 2) are open for it to write to. If you just run a command in a terminal window, then by default, anything you type goes to its standard input, while both its standard output and standard error get sent to that window.
+
+But you can ask the shell to change where any or all of those file descriptors point before launching the command; that's what the redirection (<, <<, >, >>) and pipe (|) operators do.
+
+The pipe is the simplest of these... command1 | command2 arranges for the standard output of command1 to feed directly into the standard input of command2. This is a very handy arrangement that has led to a particular design pattern in UNIX tools (and explains the existence of standard error, which allows a program to send messages to the user even though its output is going into the next program in the pipeline). But you can only pipe standard output to standard input; you can't send any other file descriptors to a pipe without some juggling.
+
+The redirection operators are friendlier in that they let you specify which file descriptor to redirect. So 0<infile reads standard input from the file named infile, while 2>>logfile appends standard error to the end of the file named logfile. If you don't specify a number, then input redirection defaults to fd 0 (< is the same as 0<), while output redirection defaults to fd 1 (> is the same as 1>).
+
+Also, you can combine file descriptors together: 2>&1 means "send standard error wherever standard output is going". That means that you get a single stream of output that includes both standard out and standard error intermixed with no way to separate them anymore, but it also means that you can include standard error in a pipe.
+
+So the sequence >/dev/null 2>&1 means "send standard output to /dev/null" (which is a special device that just throws away whatever you write to it) "and then send standard error to wherever standard output is going" (which we just made sure was /dev/null). Basically, "throw away whatever this command writes to either file descriptor".
+
+When nohup detects that neither its standard error nor output is attached to a terminal, it doesn't bother to create nohup.out, but assumes that the output is already redirected where the user wants it to go.
+
+The /dev/null device works for input, too; if you run a command with </dev/null, then any attempt by that command to read from standard input will instantly encounter end-of-file. Note that the merge syntax won't have the same effect here; it only works to point a file descriptor to another one that's open in the same direction (input or output). The shell will let you do >/dev/null <&1, but that winds up creating a process with an input file descriptor open on an output stream, so instead of just hitting end-of-file, any read attempt will trigger a fatal "invalid file descriptor" error.

@@ -1,0 +1,8 @@
+Eliminar ficheros en DEV/instances para una instalacion limpia.
+
+Ajustar el numero maximo de ficheros abiertos. Los sockets cuentan como ficheros.
+Si el limite es demasiado bajo pueden fallar desde las nuevas conexiones hasta la
+apertura de ficheros.
+
+Se ajusta mediante el comando: ulimit -n 8192
+Para comprobar los limites: ulimit -a
