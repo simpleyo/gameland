@@ -1,0 +1,38 @@
+{
+  "WORLD_COORD_BITS": 13,
+  "CELL_COORD_BITS": 5,
+  "QUADRANT_COORD_BITS": 5,
+  "TILE_ID_BITS": 16,
+  "NAME": "zones",
+  "STANDARD_TILES": true,
+  "TILES_MODULATE": [
+    255,
+    255,
+    255,
+    123
+  ],
+  "TILE_COUNT": 2,
+  "EMPTY_CELL_VALUE": -1,
+  "ORIGIN": [
+    23,
+    24
+  ],
+  "SIZE": [
+    2,
+    1
+  ],
+  "MAX_TILE_ID": 1,
+  "TILES": [
+    1,
+    0,
+    0,
+    0,
+    256,
+    0
+  ],
+  "CELLS_COUNT": 2,
+  "CELLS": [
+    1,
+    0
+  ]
+}

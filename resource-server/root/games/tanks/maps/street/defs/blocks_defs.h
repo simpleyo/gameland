@@ -1,0 +1,16 @@
+EMPTY                            = -1 
+BLOCK_0                          = 0  
+BLOCK_1                          = 1  
+BLOCK_2                          = 2  
+BLOCK_3                          = 3  
+BLOCK_4                          = 4  
+BLOCK_5                          = 5  
+BLOCK_6                          = 6  
+BLOCK_7                          = 7  
+BLOCK_8                          = 8  
+BLOCK_9                          = 9  
+BLOCK_10                         = 10 
+BLOCK_11                         = 11 
+BLOCK_12                         = 12 
+BLOCK_13                         = 13 
+BLOCK_14                         = 14 

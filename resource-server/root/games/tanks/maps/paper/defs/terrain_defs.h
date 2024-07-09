@@ -1,0 +1,16 @@
+EMPTY                            = -1 
+GRASS_0                          = 0  
+GRASS_1                          = 1  
+GRASS_2                          = 2  
+GRASS_3                          = 3  
+GRASS_4                          = 4  
+GRASS_5                          = 5  
+GRASS_6                          = 6  
+GRASS_7                          = 7  
+GRASS_8                          = 8  
+GRASS_10                         = 10 
+GRASS_11                         = 11 
+GRASS_12                         = 12 
+GRASS_13                         = 13 
+GRASS_14                         = 14 
+GRASS_15                         = 15 
