@@ -1,8 +1,0 @@
-El cliente deberia poderse compilar a WASM.
-
-Ver https://centrifugal.github.io/centrifugo/blog/scaling_websocket/.
-
-Ni Gorilla WebSocket ni Go Fiber soportan compilacion a WASM.
-
-Esta libreria sí lo soporta:
-    https://github.com/nhooyr/

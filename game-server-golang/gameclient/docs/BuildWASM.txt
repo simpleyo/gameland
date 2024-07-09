@@ -1,5 +1,0 @@
-Para compilarlo: 
-    go build -o static/main.wasm gameclient
-    
-Para poderlo ver en el navegador:
-    Utilizar el webserver que hay en el directorio gameclient/wasm
