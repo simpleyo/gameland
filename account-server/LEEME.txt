@@ -1,0 +1,3 @@
+El account-server funcina con la version de python 3.6.7rc1
+
+Leer el LEEME del gameland/resource-server para mas informacion.
