@@ -1,0 +1,48 @@
+Este proyecto utiliza los workspaces de go para poder tener varios modulos
+que contienen un archivo main.go.
+
+Los modulos estan listados en el archivo go.work el cual es que se utiliza en go
+para definir el workspace:
+
+    use (
+        ./gameclient
+        ./gameserver
+        ./common
+    )
+
+./gameclient: Es el cliente del juego.
+./gameserver: Es el servidor del juego.
+./common: Modulo que contiene codigo compartido por gameclient y gameserver.
+
+Para construir un modulo determinado:
+    go build ./gameclient
+Para ejecutar un modulo determinado:
+    go run ./gameclient
+
+Para que el modulo ./gameclient o el modulo ./gamesever pueda utilizar el 
+modulo ./common, hay que incluirlo en sus dependencias, editando su fichero go.mod
+e incluyendo lo siguiente:
+
+    require (
+        common v1.0.0
+    )
+
+    replace (
+        common v1.0.0 => ../common
+    )
+
+En vez de poner <replace> en cada fichero go.mod de cada modulo, que utilize el modulo common, 
+existe la posibilidad de poner <replace> en el fichero go.work del workspace en el que esten todos los
+modulos. Esto hace que el ambito de <replace> se aplique a todos los modulos.
+
+La eleccion de la version es arbitraria, podria haber sido elegida cualquier otra.
+<replace> indica que la version v1.0.0 de common esta en el directorio ../common.
+<require> indica que el modulo tiene como dependencia a la version v1.0.0 del modulo common.
+
+El modulo common esta en el directorio ./common. En dicho modulo esta el fichero common.go el cual
+declara el package common. La documentacion de Go dice: "Go programs are organized into packages. 
+A package is a collection of source files in the same directory that are compiled together. 
+Functions, types, variables, and constants defined in one source file are visible to all other 
+source files within the same package."
+
+
