@@ -1,0 +1,57 @@
+﻿add_subdirectory( mbedtls )
+add_subdirectory( b64 )
+
+add_library ( core
+    "buffer_allocator.h"
+    "circulararray.h"
+    "circularbuffer.h"
+    "circularbufferbase.h"
+    "defs.h"
+    "doublebuffer.h"
+    "endian.cpp"
+    "endian.h"
+    "error_macros.cpp"
+    "error_macros.h"
+    "fastboolmap.h"
+    "grid_locator.h"
+    "idr.h"
+    "intpoint.h"
+    "intrect.h"
+    "json_types.cpp"
+    "json_types.h"
+    "logger.cpp"
+    "logger.h"
+    "signals.cpp"
+    "signals.h"
+    "timers.cpp"
+    "timers.h"
+    "trace.cpp"
+    "trace.h"
+    "types.h"
+    "utils.cpp"
+    "utils.h"
+
+    "fastlz/fastlz.c"
+    "fastlz/fastlz.h"
+    "json/include/json.hpp"
+    "math/math_2d.cpp"
+    "math/math_2d.h"
+    "math/math_defs.h"
+    "math/math_funcs.cpp"
+    "math/math_funcs.h"
+    "math/typedefs.h"
+    "pool/noniterable_objectpool.h"
+    "pool/objectpool.h"
+    "pool/stackpool.h"
+    "pool/staticpool.h"
+    "stlplus/file_system.cpp"
+    "stlplus/file_system.hpp"
+    "stlplus/portability_fixes.cpp"
+    "stlplus/portability_fixes.hpp"
+    "stlplus/wildcard.cpp"
+    "stlplus/wildcard.hpp"
+)
+
+target_include_directories(core PUBLIC ".." "../../thirdparty" "../../thirdparty/usockets")
+
+
