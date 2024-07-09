@@ -1,0 +1,7 @@
+En este directorio deben ir:
+
+- Todos los recursos que sean comunes a todos los maps. De esa manera no se tendran que 
+subir a todos los clientes cada vez que estos suban un map.
+
+- Todos los recursos que sean independientes de los maps y vayan a ser usados por los clientes o
+por los gameservers. Los ficheros que se enviaran a los gameservers se indican en los ficheros cfg.

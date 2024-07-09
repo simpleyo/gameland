@@ -1,0 +1,3 @@
+ATENCION: El AccountServer recorre el directorio gameland\resource-server\root
+en busca de ficheros con el nombre game.cfg y de esa forma identifica a los directorios 
+que contienen un game.

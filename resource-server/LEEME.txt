@@ -1,0 +1,46 @@
+El directorio resource-server es administrado por account-server.
+
+En el directorio root es donde se encuentran todos los resources.
+
+Al iniciar el account-server se realiza una actualizacion mediante la cual
+se genera un mapa en memoria que contiene para cada (game_name, resource_path) su md5. 
+De esta manera la funcion ResourceManager.get_resource no necesita 
+acceder a disco para comprobar si el md5 del resource requerido
+es el mismo que el del fichero que se encuentra en el resource_server.
+
+ATENCION: El AccountServer (python) recorre el directorio gameland\resource-server\root
+en busca de ficheros con el nombre game.cfg y de esa forma identifica a los directorios 
+que contienen un game.
+
+Al iniciar el account-server todos los gameservers son forzados a reiniciar, ya que su
+lobby_id deja estar en el account server y deben volver a registrarse. Esto garantiza que
+todos los gameserver tendran los mismos recursos obtenidos desde el account-server. 
+
+El launcher se asegura de lanzar los procesos gameservers, uno detras de otro, de tal forma
+que el siguiente no se lanza hasta que el anterior esta completamente configurado, es decir, cuando
+ya ha terminado de utilizar el ResourceDownloadManager en modo escritura. Esto es necesario porque
+todos los gameserver comparten su directorio local de recursos el cual esta en 
+G:\DEV\Projects\gameland\game-server\games el cual es el lugar donde copian los recursos que 
+reciben desde el main-server.
+
+Todos los ficheros que cuelgan del directorio root son considerados resources, es decir,
+estaran disponibles para el resource-server. Por ejemplo, un cliente puede enviarle el
+comando GET_GAME_RESOURCE para recibir un recurso que no esta indicado en ningun fichero cfg
+de ningun juego a condicion de que cuelgue del directorio root y de que el resource-server haya
+llamado a _update_resources despues de la creacion del fichero de dicho recurso. Para optimizar
+el resource-server ahora solo se consideran recursos los que tienen una extension determinada,
+por ejemplo, '.json' o '.png' (ver resource_server.py la funcion _update_resources). 
+
+No todos los ficheros que cuelgan del directorio root se enviaran al gameserver, desde el mainserver,
+cuando se ejcute el comando MATCHMAKE.  Solo se enviaran los que esten indicados en game.cfg y en 
+los map.cfg. Si, ademas, estan marcados con {"client":true}, en los ficheros cfg, entonces los gameservers 
+los enviaran tambien a los clientes de los gameservers.
+
+ATENCION: Los clientes pueden obtener recursos desde el account-server (aka main-server).
+Para poder hacerlo los clientes envian el comando GET_GAME_RESOURCE al main server. Por ejemplo, 
+cuando un cliente se conecta al main-server, manda el comando GET_GAME_RESOURCE para recibir 
+el archivo game.cfg, el cual esta en <resource-server\root\games\tanks>. En dicho fichero 
+se da informacion a los clientes sobre los mapas que soporta el juego. Esto permite actualizar 
+recursos del cliente sin tener que modificar el codigo del cliente.
+
+

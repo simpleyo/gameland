@@ -1,0 +1,22 @@
+{
+  "EFFECTS_COUNT": 3,
+  "EFFECTS_NAMES": [
+    "smoke",
+    "skid",
+    "fire_skid"
+  ],
+  "EFFECTS_PARAMS": [
+    128,
+    128,
+    256,
+    128,
+    0,
+    0,
+    128,
+    128,
+    0,
+    256,
+    128,
+    128
+  ]
+}
