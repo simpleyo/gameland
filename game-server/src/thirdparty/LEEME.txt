@@ -1,0 +1,24 @@
+----------------------
+        uws
+----------------------
+
+Tiene como dependencias: libuv.lib, ssleay32.lib, libeay32.lib
+Todas las dependencias estan en: C:\DEV\Tools\vcpkg\vcpkg-master\installed\x64-windows-static
+
+IMPORTANTE: La version es uWebSockets-0.14.8, pero contiene CAMBIOS en el
+codigo hechos por mi.
+
+----------------------
+        usockets
+----------------------
+
+Es la version 0.8.1
+
+Tiene como dependencias: libuv.lib, ssleay32.lib, libeay32.lib
+Todas las dependencias estan en: C:\DEV\Tools\vcpkg\vcpkg-master\installed\x64-windows-static
+
+----------------------
+        Box2D
+----------------------
+
+Es la version 2.3.1
