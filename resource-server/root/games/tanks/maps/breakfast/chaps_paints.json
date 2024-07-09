@@ -1,0 +1,27 @@
+{
+  "WORLD_COORD_BITS": 13,
+  "QUADRANT_COORD_BITS": 4,
+  "PAINT_ID_BITS": 16,
+  "NAME": "chaps",
+  "PAINT_COUNT": 1,
+  "PAINT_INSTANCE_COUNT": 1,
+  "PAINT_NAMES": [
+    "stone"
+  ],
+  "PAINTS": [
+    0,
+    73,
+    6,
+    157,
+    55,
+    10
+  ],
+  "PAINT_INSTANCES": [
+    0,
+    4095,
+    3204,
+    -2,
+    4.5,
+    1
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "WORLD_COORD_BITS": 13,
+  "QUADRANT_COORD_BITS": 4,
+  "PAINT_ID_BITS": 16,
+  "NAME": "buildings",
+  "PAINT_COUNT": 0,
+  "PAINT_INSTANCE_COUNT": 0,
+  "PAINT_NAMES": [
+
+  ],
+  "PAINTS": [
+
+  ],
+  "PAINT_INSTANCES": [
+
+  ]
+}

@@ -1,0 +1,13 @@
+EMPTY                            = -1 
+MAIN_PATH_LEFT                   = 0  
+MAIN_PATH_BOTTOM                 = 1  
+MAIN_PATH_CORNER_TOP_LEFT        = 2  
+MAIN_PATH_CORNER_TOP_RIGHT       = 3  
+MAIN_PATH_CORNER_BOTTOM_LEFT     = 4  
+MAIN_PATH_CORNER_BOTTOM_RIGHT    = 5  
+MAIN_PATH_INNER_BOTTOM_RIGHT     = 6  
+MAIN_PATH_INNER_BOTTOM_LEFT      = 7  
+MAIN_PATH_INNER_TOP_RIGHT        = 8  
+MAIN_PATH_INNER_TOP_LEFT         = 9  
+MAIN_PATH_RIGHT                  = 10 
+MAIN_PATH_TOP                    = 11 

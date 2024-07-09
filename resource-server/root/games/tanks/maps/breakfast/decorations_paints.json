@@ -1,0 +1,28 @@
+{
+  "WORLD_COORD_BITS": 13,
+  "QUADRANT_COORD_BITS": 5,
+  "PAINT_ID_BITS": 16,
+  "NAME": "decorations",
+  "SPAWN_PLACE_PAINT_ID": 0,
+  "PAINT_COUNT": 1,
+  "PAINT_INSTANCE_COUNT": 1,
+  "PAINT_NAMES": [
+    "spawn_place"
+  ],
+  "PAINTS": [
+    0,
+    894,
+    189,
+    68,
+    104,
+    0
+  ],
+  "PAINT_INSTANCES": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1
+  ]
+}
